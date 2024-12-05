@@ -1,0 +1,416 @@
+---
+import BtnAnexo from '../_components/BtnAnexo.astro'
+import BtnVideo from '../_components/BtnVideo.astro'
+import SelectPontos from '../_components/SelectPontos.astro'
+
+const rows5s = [
+    {
+        item: "1 Conscientização de 5S - A loja atende ao programa de 5 S na sua totalidade",
+        descricao: "O Check list do 5S está devidamente preenchido",
+        peso: "5,0%",
+        pontos: "5",
+    },
+    {
+        item: "2 Melhoria dos resultados de 5S - A evolução pode ser percebida e isso está gerando o reconhecimento periódico dos melhores resultados.",
+        descricao: "Frequencia de auditorias estão sendo realizadas Verificar como o reconhecimento é realizado. <br> Bate papo com o Time para verificação de conhecimento da ferramenta",
+        peso: "4,0%",
+        pontos: "4",
+    }
+]
+
+
+const rowsGente = [
+    {
+        item: "3 Ciclo de gente é realizado na sua totalidade",
+        descricao: "Medir no ato da auditoria se as etapas do ciclo estão sendo cumpridas na sua totalidade",
+        peso: "4,0%",
+        pontos: "4",
+    },
+    {
+        item: "4 Os Fardamentos e EPI´s estão disponíveis para uso e em bom estado de conservação.",
+        descricao: "Loja apresenta controle de Fardamento de EPIs para todos os funcionários? <br> Loja tem ficha de EPI e fardamento para todo o Time?",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "5 Ausência de adornos, esmalte, unhas compridas, perfume e barba.",
+        descricao: "Garantir que não haja nenhum funcionário com a utilização dos itens citados garantindo a padronização de atendimento prevista nas regras de qualidade. <br> Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
+        peso: "4,0%",
+        pontos: "4",
+    },
+    {
+        item: "6 Itens pessoais mantidos fora das áreas de producao e distribuição estão armazenamento adequadamente, colaboradores não bebem, comem ou mascam chiclete dentro da loja.",
+        descricao: "Garantir que não haja nenhum item pessoal na área de produção e distribuição. <br> Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "7 Equipe não trabalha com sintoma de doença e/ou infecção",
+        descricao: "Verificar dados em atestados vs registro de ponto Ver por amostragem",
+        peso: "4,0%",
+        pontos: "4",
+    },
+    {
+        item: "8 As entrevistas de desligamento estão arquivadas e vistadas pelo gerente?",
+        descricao: "Verificar junto ao Líder de ADM os desligamentos e os arquivos das entrevistas. <br> Pontos críticos estão sendo tratados através de plano de ação - definição de perfil, ajuste de processos,...",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "9 A Operação tem e garante a execução do planejamento de Férias dos seus colaboradores?",
+        descricao: "Garantir que não haja nenhum funcionário com a utilização dos itens citados garantindo a padronização de atendimento prevista nas regras de qualidade. <br> Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "10 Os funcionários estão efetuando as marcações de pontos (entradas e saídas) devidamente uniformizados? Todos os funcionários que atendem a clientes portam crachás de identificação?",
+        descricao: "1. Verificar o registro de ponto - máximo 3% de ajustes manuais 3. Loja sem falhas de escalas cadastradas no sistema vs funcionário in loco (pegar um funcionário no dia da auditoria e verificar a sua escala no sistema de ponto) 4. <br> Relógio apenas com registro na digital (se houver algum funcionário sem necessário atestado médico que valide falhas na digital)",
+        peso: "4,0%",
+        pontos: "4",
+    },
+    {
+        item: "11 A Escala de folga está afixada em local visível?",
+        descricao: "Garantir que todo o time saiba o local de exposição das escalas Ter as escalas prontas para o mês e definidas de forma a garantir o melhor atendimento nos momentos de pico - Plano semanal, mensal, considerando feriados e datas comemorativas.",
+        peso: "4,0%",
+        pontos: "4",
+    },
+    {
+        item: "12 As Avaliações de Treinamento estão sendo realizadas conforme o padrão?",
+        descricao: "Garantir que todo o time saiba o local de exposição das escalas Ter as escalas prontas para o mês e definidas de forma a garantir o melhor atendimento nos momentos de pico - Plano semanal, mensal, considerando feriados e datas comemorativas.",
+        peso: "4,0%",
+        pontos: "4",
+    },
+    {
+        item: "13 A gerência assegura a realização diária do tratamento do ponto no sistema e a assinatura mensal da folha de ponto pelo Gerente e Líder?",
+        descricao: "Verificar se os apontamentos no sistema de ponto estão de acordo com o Padrão estabelecido * Obter zero falhas de registro - ex.: Falta injustificada vs desconto de folha de pagamento",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "14 A documentação dos colaboradores contratados no mês está devidamente assinada e no seu prontuário?",
+        descricao: "Verificação do prontuário",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "15 A aplicação do treinamento inicial ou contínuo ocorre de acordo com os padrões e processos de Treinamento?",
+        descricao: "Rever o plano de treinamento - parabenizar os melhores (reconhecer) e realizar novas avaliações com os de notas mais baixas para melhorar o seu desempenho.",
+        peso: "5,0%",
+        pontos: "5",
+    },
+    {
+        item: "16 O quadro de comunicação segue o padrão e está atualizado com os informativos necessárias?",
+        descricao: "In Loco",
+        peso: "5,0%",
+        pontos: "5",
+    },
+    {
+        item: "17 O Programa de Destaque do Mês segue os critérios de avaliação? (Comunicação / Treinamento)",
+        descricao: "Loja garante que os critérios sejam amplamente divulgados nas operações",
+        peso: "4,0%",
+        pontos: "4",
+    },
+    {
+        item: "18 A gerência realiza diariamente as reuniões de turno e pós plantão com direcionamento dos objetivos e semanalmente com a liderança.",
+        descricao: "Verificar se o processo está sendo executado e se o time demonstra conhecimento em relação ao processo",
+        peso: "4,0%",
+        pontos: "4",
+    },
+    {
+        item: "19 O Gerente garante a aplicação de ao menos uma Avaliações de Treinamento por dia (para cada gerente / Líder no turno) e está programado no Plano de Chão.",
+        descricao: "Verificar se o processo está sendo executado e se o time demonstra conhecimento em relação ao processo",
+        peso: "5,0%",
+        pontos: "5",
+    },
+]
+
+
+const rowsGestao = [
+    {
+        item: "20 O gerente realiza o procedimento de caixa surpresa diariamente.",
+        descricao: "Verificar se o processo está sendo executado e se o time demonstra conhecimento em relação ao processo",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "21 Os novos colaboradores receberam o treinamento de integração e é evidenciado pela lista de presença.",
+        descricao: "Verificar se o processo está sendo executado e se o time demonstra conhecimento em relação ao processo",
+        peso: "5,0%",
+        pontos: "5",
+    },
+    {
+        item: "22 O gerente realiza a reunião mensal com a equipe de colaboradores e bimestralmente as seções de rap session com elaboração do plano de ação.",
+        descricao: "Garantir que os planos de ação estejam atualizados e que o Time conheça - medir através de bate papo com a Equipe, além da verificação do plano.",
+        peso: "5,0%",
+        pontos: "5",
+    },
+    {
+        item: "23 Os Colaboradores e nível gerencial têm conhecimento do resultado da ultima auditoria de Qualidade e a classificação do restaurante no Programa PEF  e atuam sobre o plano de ação para a evolução do resultado.",
+        descricao: "Garantir que os planos de ação estejam atualizados e que o Time conheça - medir através de bate papo com a Equipe, além da verificação do plano.",
+        peso: "3,0%",
+        pontos: "3",
+    },
+]
+
+
+const rowsArea = [
+    {
+        item: "24 Os vestiários dos colaboradores, estão limpos e em ordem e os armários estão conservados e são suficientes para o número de funcionários.",
+        descricao: "Loja garante que todos os funcionários estejam com armários disponíveis? <br> Área de Vestiários e banheiros estão limpos e organizados? <br> (Verificar ficha de limpeza no local)",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "25 Os produtos do refeitório estão em temperatura acima de 60ºC (produtos quentes) e até 10ºC (produtos frios), seguindo o cardápio do PAT.",
+        descricao: "Cardápio atendido dentro da ficha técnica? <br> Garante a meta de disperdício?",
+        peso: "3,0%",
+        pontos: "3",
+    },
+    {
+        item: "26 O refeitório está limpo, iluminado, estrutura conservada, boa temperatura, com sistema de comunicação organizado e atualizado.",
+        descricao: "Garantir as condições básicas para os funcionários",
+        peso: "3,0%",
+        pontos: "3",
+    },
+]
+---
+
+<style is:inline>
+    .aval-line-sub td{
+        font-weight: bold;
+    }
+    .tooltip-aval{
+        max-width: 400px;
+        text-align: left;
+    }
+
+    .list-add{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 0.5rem
+    }
+    .list-add li{
+        width: 20px;
+        line-height: 1;
+    }
+    .list-add li a{ display: block;}
+
+    [data-bs-theme=light] {
+        .aval-line-sub td{
+            background-color: #eee;
+        }
+    }
+
+    [data-bs-theme=dark] {
+        .aval-line-sub td{
+            background-color: #1a1a1a;
+        }
+    }
+</style>
+
+<div class="table-responsive" style="max-height: 500px">
+    <table class="table table-bordered table-fixed small text-center fixThead">
+        <thead>
+            <th style="width: 600px">Item</th>
+            <th style="width: 080px">Adicionais</th>
+            <th style="width: 070px">Peso</th>
+            <th style="width: 070px">Pontos</th>
+            <th style="width: 110px">Pontos Alcançado</th>
+        </thead>
+
+        <tbody>
+            <tr class="aval-line-sub">
+                <td colspan="2" class="text-start">5 S</td>
+                <td>9,0%</td>
+                <td>9</td>
+                <td></td>
+            </tr>
+            {
+                rows5s.map(({ item, descricao, peso, pontos }) => (
+                    <tr>
+                        <td class="text-start">
+                            <div class="d-flex align-items-baseline justify-content-between gap-1">
+                                <div>{item}</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <ul class="list-add">
+                                <li>
+                                    <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
+                                        <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <BtnAnexo />
+                                </li>
+
+                                <li>
+                                    <BtnVideo />
+                                </li>
+                            </ul>
+                        </td>
+
+                        <td>{peso}</td>
+                        <td>{pontos}</td>
+
+                        <td>
+                            <SelectPontos />
+                        </td>
+                    </tr>
+                ))
+            }
+
+
+            <tr class="aval-line-sub">
+                <td colspan="2" class="text-start">Gente</td>
+                <td>66%</td>
+                <td>66</td>
+                <td></td>
+            </tr>
+            {
+                rowsGente.map(({ item, descricao, peso, pontos }) => (
+                    <tr>
+                        <td class="text-start">
+                            <div class="d-flex align-items-baseline justify-content-between gap-1">
+                                <div>{item}</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <ul class="list-add">
+                                <li>
+                                    <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
+                                        <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <BtnAnexo />
+                                </li>
+
+                                <li>
+                                    <BtnVideo />
+                                </li>
+                            </ul>
+                        </td>
+
+                        <td>{peso}</td>
+                        <td>{pontos}</td>
+
+                        <td>
+                            <SelectPontos />
+                        </td>
+                    </tr>
+                ))
+            }
+
+
+            <tr class="aval-line-sub">
+                <td colspan="2" class="text-start">Gestão</td>
+                <td>16%</td>
+                <td>16</td>
+                <td></td>
+            </tr>
+            {
+                rowsGestao.map(({ item, descricao, peso, pontos }) => (
+                    <tr>
+                        <td class="text-start">
+                            <div class="d-flex align-items-baseline justify-content-between gap-1">
+                                <div>{item}</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <ul class="list-add">
+                                <li>
+                                    <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
+                                        <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <BtnAnexo />
+                                </li>
+
+                                <li>
+                                    <BtnVideo />
+                                </li>
+                            </ul>
+                        </td>
+
+                        <td>{peso}</td>
+                        <td>{pontos}</td>
+
+                        <td>
+                            <SelectPontos />
+                        </td>
+                    </tr>
+                ))
+            }
+
+
+            <tr class="aval-line-sub">
+                <td colspan="2" class="text-start">Área Interna / Vestiários</td>
+                <td>9%</td>
+                <td>9</td>
+                <td></td>
+            </tr>
+            {
+                rowsArea.map(({ item, descricao, peso, pontos }) => (
+                    <tr>
+                        <td class="text-start">
+                            <div class="d-flex align-items-baseline justify-content-between gap-1">
+                                <div>{item}</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <ul class="list-add">
+                                <li>
+                                    <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
+                                        <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <BtnAnexo />
+                                </li>
+
+                                <li>
+                                    <BtnVideo />
+                                </li>
+                            </ul>
+                        </td>
+
+                        <td>{peso}</td>
+                        <td>{pontos}</td>
+
+                        <td>
+                            <SelectPontos />
+                        </td>
+                    </tr>
+                ))
+            }
+        </tbody>
+    </table>
+</div>
+
+<script is:inline>
+    window.addEventListener('load', () => {
+
+        $('[data-bs-toggle="tooltip-aval"]').tooltip({
+            html: true,
+        })
+
+        $('[data-bs-toggle="tooltip-aval"]').on('inserted.bs.tooltip',function () {
+            var thisClass5 = $(this).attr("class");
+            $('.tooltip-inner').addClass('tooltip-aval');
+        });
+    })
+</script>
