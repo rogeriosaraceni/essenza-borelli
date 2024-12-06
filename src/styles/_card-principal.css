@@ -85,9 +85,14 @@
     color: #fff;
 }
 
+
+/* --color-app-green-400: #606a55;
+--color-app-green-500: #374d29; */
+
+
 .principal-cards .link-card:hover figure {
     color: #fff;
-    background-color: var(--color-primary-red);
+    background-color: var(--color-app-green-500);
 }
 
 .principal-cards .link-card:hover figure .content-icon {
@@ -100,7 +105,7 @@
 }
 
 .principal-cards .link-card:hover h4 {
-    color: var(--color-purple-400);
+    color: var(--color-app-green-500);
     background-color: #fff;
 }
 
