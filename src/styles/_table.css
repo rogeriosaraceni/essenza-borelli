@@ -15,6 +15,7 @@ table>thead>tr>th / table>tfoot>tr>th
 -------------------------------------------------------------------- */
 .table>thead>tr>th,
 .table>tfoot>tr>th {
+    text-align: center;
     border-bottom-width: 1px;
     font-weight: 400;
     padding-top: 0.3rem;
@@ -84,10 +85,13 @@ dataTables-custom - page-link
 -------------------------------------------------------------------- */
 .dataTables_paginate .active>.page-link,
 .dataTables_paginate .page-link.active {
-    background-color: var(--color-primary-yellow);
-    border-color: var(--color-primary-yellow);
+    background-color: var(--color-app-green-400);
+    border-color: var(--color-app-green-400);
 }
 .dataTables_paginate .disabled>.page-link,
 .dataTables_paginate .page-link.disabled {
     background-color: transparent;
+}
+.dataTables_wrapper .dataTables_filter label {
+    display: inline-block;
 }

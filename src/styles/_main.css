@@ -1,6 +1,6 @@
 /* ////////////////////////////////////////////////////////////////////
 html, body, body-popup
-main-app, container-fluid
+main-app
 link
 heading
 scrollbar
@@ -34,12 +34,7 @@ main-app, container-fluid
 ---------------------------------------------------------------------- */
 .main-app {
     flex: 1;
-    margin: 0 1.5rem;
     padding-bottom: 1.875rem;
-}
-
-.container-fluid{
-    max-width: 1600px;
 }
 
 /* --------------------------------------------------------------------
@@ -97,7 +92,7 @@ section-title
 }
 
 .section-title .title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--bs-color);
 }
 
