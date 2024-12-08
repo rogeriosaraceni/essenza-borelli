@@ -25,6 +25,10 @@ app variables
 /* --------------------------------------------------------------------
 breadcrumb-app
 ---------------------------------------------------------------------- */
+.breadcrumb-app{
+    padding: 0.5rem 0;
+    margin-bottom: 0.25rem;
+}
 .breadcrumb-item,
 .breadcrumb-item a { color: #6c757d;}
 .breadcrumb-item.active { color: var(--app-active);}
@@ -128,11 +132,13 @@ btn
 .nav-tabs .nav-link:hover{
     color: #333;
 }
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-link.active:hover{
+.nav-tabs .nav-link.active{
+    color: #fff!important;
     background-color: var(--app-active);
 }
-
+.nav-tabs .nav-link.active:hover{
+    background-color: var(--color-app-green-500);
+}
 /* --------------------------------------------------------------------
 * - page-item .active/disabled
 ---------------------------------------------------------------------- */

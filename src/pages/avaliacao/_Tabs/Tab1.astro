@@ -219,7 +219,8 @@ const rowsArea = [
             <th style="width: 080px">Adicionais</th>
             <th style="width: 070px">Peso</th>
             <th style="width: 070px">Pontos</th>
-            <th style="width: 110px">Pontos Alcançado</th>
+            <th style="width: 110px">Pontos Franqueado</th>
+            <th style="width: 110px">Pontos Consultor</th>
         </thead>
 
         <tbody>
@@ -227,6 +228,7 @@ const rowsArea = [
                 <td colspan="2" class="text-start">5 S</td>
                 <td>9,0%</td>
                 <td>9</td>
+                <td></td>
                 <td></td>
             </tr>
             {
@@ -262,6 +264,9 @@ const rowsArea = [
                         <td>
                             <SelectPontos />
                         </td>
+                        <td>
+                            <SelectPontos />
+                        </td>
                     </tr>
                 ))
             }
@@ -271,6 +276,7 @@ const rowsArea = [
                 <td colspan="2" class="text-start">Gente</td>
                 <td>66%</td>
                 <td>66</td>
+                <td></td>
                 <td></td>
             </tr>
             {
@@ -306,6 +312,10 @@ const rowsArea = [
                         <td>
                             <SelectPontos />
                         </td>
+
+                        <td>
+                            <SelectPontos />
+                        </td>
                     </tr>
                 ))
             }
@@ -315,6 +325,7 @@ const rowsArea = [
                 <td colspan="2" class="text-start">Gestão</td>
                 <td>16%</td>
                 <td>16</td>
+                <td></td>
                 <td></td>
             </tr>
             {
@@ -350,6 +361,9 @@ const rowsArea = [
                         <td>
                             <SelectPontos />
                         </td>
+                        <td>
+                            <SelectPontos />
+                        </td>
                     </tr>
                 ))
             }
@@ -359,6 +373,7 @@ const rowsArea = [
                 <td colspan="2" class="text-start">Área Interna / Vestiários</td>
                 <td>9%</td>
                 <td>9</td>
+                <td></td>
                 <td></td>
             </tr>
             {
@@ -391,6 +406,9 @@ const rowsArea = [
                         <td>{peso}</td>
                         <td>{pontos}</td>
 
+                        <td>
+                            <SelectPontos />
+                        </td>
                         <td>
                             <SelectPontos />
                         </td>
