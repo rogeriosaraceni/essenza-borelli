@@ -1,17 +1,45 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Header from '@includes/Header.astro';
-import CardsPrincipal from './_CardsPrincipal.astro';
+import '@styles/_card-principal.css'
+
+const cards = [
+    {
+        name: "PEX",
+        icon: "bi bi-gear text-app-green-400",
+        nameClassColor: "bg-app-green-400",
+        link: "/systems/pex/",
+    },
+    {
+        name: "Implantação",
+        icon: "bi bi-clipboard-check text-app-green-400",
+        nameClassColor: "bg-app-green-400",
+        link: "/systems/implantacao/",
+    },
+];
 ---
 
 <Layout>
-    <header data-el="top-fixed" class="header-app navbar navbar-expand-xl">
-        <Header />
-    </header>
+    <Header />
 
     <main data-el="main-app" class="main-app">
         <section class="container-fluid">
-            <CardsPrincipal />
+            <div class="slide-in-blurred-bottom principal-cards">
+                {
+                    cards.map(({ link, icon, name, nameClassColor }) => (
+                        <div class="col-card">
+                            <a class="link-card" href={link}>
+                                <figure>
+                                    <div class="content-icon">
+                                        <i class={icon}></i>
+                                    </div>
+                                </figure>
+                                <h4 class={nameClassColor}>{name}</h4>
+                            </a>
+                        </div>
+                    ))
+                }
+            </div>
         </section>
     </main>
 </Layout>
