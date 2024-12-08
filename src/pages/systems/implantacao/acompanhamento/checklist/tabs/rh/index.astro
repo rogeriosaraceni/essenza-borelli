@@ -2,8 +2,9 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@includes/Header.astro';
 import BtnPrincipal from '@components/Btns/BtnPrincipal.astro';
-import ContentInfo from './_content-info.astro'
-import ContentTabs from './_content-tabs.astro'
+import ContentInfo from '../../_content-info.astro'
+import ContentTabs from '../../_content-tabs.astro'
+import ContentForm from './_content-form.astro'
 
 ---
 
@@ -24,7 +25,11 @@ import ContentTabs from './_content-tabs.astro'
                             <a href="/systems/implantacao/">Implantação</a>
                         </li>
                         <li class="breadcrumb-item">Acompanhamento</li>
-                        <li class="breadcrumb-item active" aria-current="page">Checklist</li>
+                        <li class="breadcrumb-item">
+                            <a href="/systems/implantacao/acompanhamento/status/">Status</a>
+                        </li>
+                        <li class="breadcrumb-item">Checklist</li>
+                        <li class="breadcrumb-item active" aria-current="page">RH</li>
                     </ol>
 
                     <BtnPrincipal />
@@ -35,6 +40,8 @@ import ContentTabs from './_content-tabs.astro'
         <section class="container-fluid">
             <ContentInfo />
             <ContentTabs />
+
+            <ContentForm />
         </section>
     </main>
 </Layout>
