@@ -1,7 +1,66 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <div class="card">
     <div class="card-body">
         <div class="section-title">
             <span class="title">Projeto</span>
         </div>
+
+        <form action="">
+            <div class="d-flex gap-2">
+                Ultima atualização: <span>Alex Macedo</span> - <span>07/12/24 15:40</span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center table-fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 400px;">Itens</th>
+                            <th style="width: 150px;">Franqueado</th>
+                            <th style="width: 150px;">Consultor</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <label>
+                                    <div class="btn-checklist">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                        <input type="checkbox" name="item" value="">
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
     </div>
 </div>
+
+<style is:inline>
+    .btn-checklist{
+        position: relative;
+        color: #b4b8bb;
+        cursor: pointer;
+        font-size: 1.65rem !important;
+    }
+    .btn-checklist.active{
+        color: var(--color-app-green-400);
+    }
+    .btn-checklist input{
+        z-index: -1;
+        position: absolute;
+    }
+</style>
+
+<script is:inline>
+    $('.btn-checklist').on('click', function(){
+        console.log('clicou');
+
+        $(this).toggleClass('active')
+    })
+</script>
