@@ -29,13 +29,13 @@ As principais tecnologias e ferramentas utilizadas neste projeto são:
 
 ### Vendors/Plugins:
 - **[Animista](https://animista.net/)**: Biblioteca de animações CSS prontas para uso.
-- **[amCharts 4](https://www.amcharts.com/)**: Biblioteca para criação de gráficos interativos e personalizáveis.
+- **[AmCharts 4](https://www.amcharts.com/)**: Biblioteca para criação de gráficos interativos e personalizáveis.
 - **[Bootstrap Select v1.14.0-beta3](https://developer.snapappointments.com/bootstrap-select/)**: Plugin jQuery para estilização e funcionalidade avançada em elementos `<select>`.
 - **[IMask v7.1.2](https://imask.js.org/)**: Biblioteca para aplicação de máscaras em campos de entrada de texto.
 - **[jQuery Mask Plugin v1.14.16](https://igorescobar.github.io/jQuery-Mask-Plugin/)**: Plugin jQuery para aplicação de máscaras em campos de entrada.
 - **[DataTables v1.13.4](https://datatables.net/)**: Plugin jQuery para criação de tabelas dinâmicas e interativas.
 - **[DOMPurify v3.2.2](https://cure53.de/purify)**: Biblioteca para sanitização de HTML e prevenção contra ataques XSS.
-- **[floatThead v2.2.5](https://mkoryak.github.io/floatThead/)**: Plugin jQuery para manter cabeçalhos de tabelas fixos durante o scroll.
+- **[FloatThead v2.2.5](https://mkoryak.github.io/floatThead/)**: Plugin jQuery para manter cabeçalhos de tabelas fixos durante o scroll.
 
 ### Servidor:
 - **[Vercel](https://vercel.com/)**: Hospedagem para sites e aplicações de alta performance.
