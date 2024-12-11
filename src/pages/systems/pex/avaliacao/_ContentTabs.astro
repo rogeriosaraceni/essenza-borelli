@@ -12,12 +12,10 @@ import Tab7 from "./_Tabs/Tab7.astro";
 import Tab8 from "./_Tabs/Tab8.astro";
 import Tab9 from "./_Tabs/Tab9.astro";
 import Tab10 from "./_Tabs/Tab10.astro";
-import Tab11 from "./_Tabs/Tab11.astro";
-
 
 const tabs = [
     {
-        name: "Gente Gestão",
+        name: "Gestão",
         classText: "nav-link active",
         id: "tab-1",
         dataBsTarget: "#tab-1-pane",
@@ -25,7 +23,7 @@ const tabs = [
         ariaSelected: true,
     },
     {
-        name: "Requisitos Legais",
+        name: "Gente",
         classText: "nav-link",
         id: "tab-2",
         dataBsTarget: "#tab-2-pane",
@@ -33,7 +31,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Operações",
+        name: "Infraestrutura",
         classText: "nav-link",
         id: "tab-3",
         dataBsTarget: "#tab-3-pane",
@@ -41,7 +39,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Cozinha Produção",
+        name: "Legislação",
         classText: "nav-link",
         id: "tab-4",
         dataBsTarget: "#tab-4-pane",
@@ -49,7 +47,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Armazem Estoque",
+        name: "Marketing",
         classText: "nav-link",
         id: "tab-5",
         dataBsTarget: "#tab-5-pane",
@@ -57,7 +55,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Faturamento",
+        name: "Operação",
         classText: "nav-link",
         id: "tab-6",
         dataBsTarget: "#tab-6-pane",
@@ -65,7 +63,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Food Cost",
+        name: "Administrativo e financeiro",
         classText: "nav-link",
         id: "tab-7",
         dataBsTarget: "#tab-7-pane",
@@ -73,7 +71,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Turnover",
+        name: "Jurídico",
         classText: "nav-link",
         id: "tab-8",
         dataBsTarget: "#tab-8-pane",
@@ -81,7 +79,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Margem Contribuição",
+        name: "Produto",
         classText: "nav-link",
         id: "tab-9",
         dataBsTarget: "#tab-9-pane",
@@ -89,19 +87,11 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Digital",
+        name: "Resultados",
         classText: "nav-link",
         id: "tab-10",
         dataBsTarget: "#tab-10-pane",
         ariaControls: "tab-10-pane",
-        ariaSelected: false,
-    },
-    {
-        name: "Resumo",
-        classText: "nav-link",
-        id: "tab-11",
-        dataBsTarget: "#tab-11-pane",
-        ariaControls: "tab-11-pane",
         ariaSelected: false,
     },
 ]
@@ -183,10 +173,6 @@ const tabs = [
 
         <TabsContent id="tab-10-pane", ariaLabelledby="tab-10">
             <Tab10 />
-        </TabsContent>
-
-        <TabsContent id="tab-11-pane", ariaLabelledby="tab-11">
-            <Tab11 />
         </TabsContent>
     </div>
 </CardCardBody>
