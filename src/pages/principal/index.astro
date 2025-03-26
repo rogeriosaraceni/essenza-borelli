@@ -1,34 +1,7 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Header from '@includes/Header.astro';
-import '@styles/_card-principal.css'
-
-const cards = [
-    {
-        name: "Dashboard",
-        icon: "bi bi-clipboard-data text-app-green-400",
-        nameClassColor: "bg-app-green-400",
-        link: "/systems/pex/dashboard/",
-    },
-    {
-        name: "Avaliação",
-        icon: "bi bi-file-earmark-check text-app-green-400",
-        nameClassColor: "bg-app-green-400",
-        link: "/systems/pex/avaliacao/",
-    },
-    {
-        name: "Relatórios",
-        icon: "bi bi-files text-app-green-400",
-        nameClassColor: "bg-app-green-400",
-        link: "/systems/pex/relatorios/",
-    },
-    {
-        name: "Material de Treinamento",
-        icon: "bi bi-easel2 text-app-green-400",
-        nameClassColor: "bg-app-green-400",
-        link: "/systems/pex/material-treinamento/",
-    }
-];
+import Layout from "@layouts/Layout.astro";
+import Header from "@includes/Header.astro";
+import "./_card-principal.css";
 ---
 
 <Layout>
@@ -36,22 +9,55 @@ const cards = [
 
     <main data-el="main-app" class="main-app">
         <section class="container-fluid">
-            <div class="slide-in-blurred-bottom principal-cards">
-                {
-                    cards.map(({ link, icon, name, nameClassColor }) => (
-                        <div class="col-card">
-                            <a class="link-card" href={link}>
-                                <figure>
-                                    <div class="content-icon">
-                                        <i class={icon}></i>
-                                    </div>
-                                </figure>
-                                <h4 class={nameClassColor}>{name}</h4>
-                            </a>
-                        </div>
-                    ))
-                }
+            <div class="slide-in-blurred-top principal-cards">
+                <div class="col-card">
+                    <a class="link-card" href="/systems/pex/dashboard/">
+                        <figure>
+                            <div class="content-icon">
+                                <i class="bi bi-clipboard-data text-app-green-400"></i>
+                            </div>
+
+                            <strong>Em Construção</strong>
+                        </figure>
+                        <h4 class="bg-app-green-400">Dashboard</h4>
+                    </a>
+                </div>
+
+                <div class="col-card">
+                    <a class="link-card" href="/systems/pex/avaliacao/">
+                        <figure>
+                            <div class="content-icon">
+                                <i class="bi bi-file-earmark-check text-app-green-400"></i>
+                            </div>
+                        </figure>
+                        <h4 class="bg-app-green-400">Avaliação</h4>
+                    </a>
+                </div>
+
+                <div class="col-card">
+                    <a class="link-card" href="/systems/pex/relatorios/">
+                        <figure>
+                            <div class="content-icon">
+                                <i class="bi bi-files text-app-green-400"></i>
+                            </div>
+                        </figure>
+                        <h4 class="bg-app-green-400">Relatórios</h4>
+                    </a>
+                </div>
+
+                <div class="col-card">
+                    <a class="link-card" href="/systems/pex/material-treinamento/">
+                        <figure>
+                            <div class="content-icon">
+                                <i class="bi bi-easel2 text-app-green-400"></i>
+                            </div>
+                        </figure>
+                        <h4 class="bg-app-green-400">Material de Treinamento</h4>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 </Layout>
+
+
