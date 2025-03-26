@@ -11,11 +11,10 @@ import Tab6 from "./_Tabs/Tab6.astro";
 import Tab7 from "./_Tabs/Tab7.astro";
 import Tab8 from "./_Tabs/Tab8.astro";
 import Tab9 from "./_Tabs/Tab9.astro";
-import Tab10 from "./_Tabs/Tab10.astro";
 
 const tabs = [
     {
-        name: "Gestão",
+        name: "Gestão Consciente",
         classText: "nav-link active",
         id: "tab-1",
         dataBsTarget: "#tab-1-pane",
@@ -23,7 +22,7 @@ const tabs = [
         ariaSelected: true,
     },
     {
-        name: "Gente",
+        name: "⁠Infraestrutura Autêntica",
         classText: "nav-link",
         id: "tab-2",
         dataBsTarget: "#tab-2-pane",
@@ -31,7 +30,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Infraestrutura",
+        name: "Gente",
         classText: "nav-link",
         id: "tab-3",
         dataBsTarget: "#tab-3-pane",
@@ -39,7 +38,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Legislação",
+        name: "Branding & Experiência do Cliente",
         classText: "nav-link",
         id: "tab-4",
         dataBsTarget: "#tab-4-pane",
@@ -47,7 +46,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Marketing",
+        name: "Qualidade Assurance",
         classText: "nav-link",
         id: "tab-5",
         dataBsTarget: "#tab-5-pane",
@@ -55,7 +54,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Operação",
+        name: "Produção",
         classText: "nav-link",
         id: "tab-6",
         dataBsTarget: "#tab-6-pane",
@@ -63,7 +62,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Administrativo e financeiro",
+        name: "Operação Lucrativa",
         classText: "nav-link",
         id: "tab-7",
         dataBsTarget: "#tab-7-pane",
@@ -71,7 +70,7 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Jurídico",
+        name: "Jurídico Essencial",
         classText: "nav-link",
         id: "tab-8",
         dataBsTarget: "#tab-8-pane",
@@ -79,19 +78,11 @@ const tabs = [
         ariaSelected: false,
     },
     {
-        name: "Produto",
+        name: "Resultados Consistentes",
         classText: "nav-link",
         id: "tab-9",
         dataBsTarget: "#tab-9-pane",
         ariaControls: "tab-9-pane",
-        ariaSelected: false,
-    },
-    {
-        name: "Resultados",
-        classText: "nav-link",
-        id: "tab-10",
-        dataBsTarget: "#tab-10-pane",
-        ariaControls: "tab-10-pane",
         ariaSelected: false,
     },
 ]
@@ -100,7 +91,7 @@ const tabs = [
 <CardCardBody>
     <div class="d-flex">
         <div class="flex-grow-1">
-            <ul class="nav nav-tabs" role="tablist">
+            <ul class="nav nav-tabs nav-tabs-app" role="tablist">
                 {
 
                     tabs.map(({ name, id, dataBsTarget, ariaControls, ariaSelected, classText }) => (
@@ -169,10 +160,6 @@ const tabs = [
 
         <TabsContent id="tab-9-pane", ariaLabelledby="tab-9">
             <Tab9 />
-        </TabsContent>
-
-        <TabsContent id="tab-10-pane", ariaLabelledby="tab-10">
-            <Tab10 />
         </TabsContent>
     </div>
 </CardCardBody>
