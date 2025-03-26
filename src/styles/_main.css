@@ -79,6 +79,29 @@ Rogerio Saraceni
 }
 
 /* --------------------------------------------------------------------
+* - btn
+---------------------------------------------------------------------- */
+.btn {
+    --bs-btn-padding-x: .75rem;
+    --bs-btn-padding-y: .215rem;
+}
+.btn-small{
+    padding: .105rem .45rem;
+}
+.btn-transparent{
+    border: none;
+    background-color: transparent;
+}
+.btn-clearfix {
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+@media(max-width: 1200px){ .btn-last-xl{ float: right;}}
+@media(max-width: 992px) { .btn-last-lg{ float: right;}}
+@media(max-width: 768px) { .btn-last-md{ float: right;}}
+@media(max-width: 576px) { .btn-last-sm{ float: right;}}
+
+/* --------------------------------------------------------------------
 section-title
 ---------------------------------------------------------------------- */
 .section-title {
