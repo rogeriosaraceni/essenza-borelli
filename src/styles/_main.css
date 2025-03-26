@@ -17,12 +17,11 @@ html, body{
 body{
     display: flex;
     flex-direction: column;
-    /* font-family: 'Livvic', sans-serif; */
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     transition: all 0.3s;
     overflow-x: hidden;
-    background-color: var(--app-body-bg);
+    background-color: #efefef;
 }
 .body-popup {
     padding: 1rem;

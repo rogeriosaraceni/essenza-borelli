@@ -17,8 +17,6 @@ header-app
 
     padding-top: 0!important;
     padding-bottom: 0!important;
-
-    background-color: var(--color-app-black-400);
 }
 
 :root, [data-bs-theme=light] {
@@ -28,8 +26,10 @@ header-app
 /* --------------------------------------------------------------------
 nav-app
 ---------------------------------------------------------------------- */
-.nav-app{
-    background-color: #313a46;
+.nav-app {
+    width: 100%;
+    background-color: #606a55;
+    padding: 0.25rem 0;
 }
 
 @media (min-width: 992px){
@@ -53,8 +53,45 @@ nav-app
 }
 
 /* --------------------------------------------------------------------
+nav-modulos
+---------------------------------------------------------------------- */
+.nav-modulos {
+    background-color: #d9d6d6;
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+    /* offcanvas-collapse (custom) */
+@media screen and (max-width: 1200px) {
+    .navbar-toggler{
+        display: block;
+    }
+    .offcanvas-collapse {
+        position: fixed;
+        /* Height of navbar */
+        top: 46px;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: #d9d6d6;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+
+    .offcanvas-collapse.open {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+}
+
+/* --------------------------------------------------------------------
 footer
 ---------------------------------------------------------------------- */
 .footer-app{
-    background-color: var(--app-bg-footer);
+    background-color: #fff;
 }

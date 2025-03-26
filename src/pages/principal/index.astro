@@ -5,7 +5,11 @@ import "./_card-principal.css";
 ---
 
 <Layout>
-    <Header />
+    <header data-el="top-fixed" class="header-app navbar navbar-expand-xl">
+        <div class="d-flex flex-column w-100">
+            <Header />
+        </div>
+    </header>
 
     <main data-el="main-app" class="main-app">
         <section class="container-fluid">
@@ -35,7 +39,7 @@ import "./_card-principal.css";
                 </div>
 
                 <div class="col-card">
-                    <a class="link-card" href="/modulos/relatorios/">
+                    <a class="link-card" href="/modulos/relatorios/exporta_base/">
                         <figure>
                             <div class="content-icon">
                                 <i class="bi bi-files text-app-green-400"></i>
