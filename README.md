@@ -65,7 +65,7 @@ As principais tecnologias e ferramentas utilizadas neste projeto são:
 
 O projeto está hospedado no Vercel e pode ser acessado pelo link:
 
-🔗 **[Essenza Borelli ](https://operacoesborelli.vercel.app/principal/)**
+🔗 **[Essenza Borelli ](https://essenzaborelli.vercel.app/principal/)**
 
 ## 🧑‍💻 Configuração do Ambiente Local
 

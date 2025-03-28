@@ -13,7 +13,7 @@ body.body-login {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url(./bgLogin2.jpg);
+	background-image: url(./bgLogin.jpg);
 }
 body.body-login::after {
 	content: '';
