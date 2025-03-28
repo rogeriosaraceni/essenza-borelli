@@ -1,7 +1,7 @@
 
-# Operações Borelli
+# Essenza Borelli
 
-Este é o repositório do projeto **Operações Borelli**, uma aplicação desenvolvida para gerenciar operações de forma eficiente, utilizando tecnologias modernas e responsivas.
+Este é o repositório do projeto **Essenza Borelli **, uma aplicação desenvolvida para gerenciar operações de forma eficiente, utilizando tecnologias modernas e responsivas.
 
 ## 🚀 Tecnologias
 
@@ -65,7 +65,7 @@ As principais tecnologias e ferramentas utilizadas neste projeto são:
 
 O projeto está hospedado no Vercel e pode ser acessado pelo link:
 
-🔗 **[Operações Borelli](https://operacoesborelli.vercel.app/principal/)**
+🔗 **[Essenza Borelli ](https://operacoesborelli.vercel.app/principal/)**
 
 ## 🧑‍💻 Configuração do Ambiente Local
 
