@@ -1,0 +1,56 @@
+---
+import Head from '@includes/head.astro';
+import ContentFranqueado from './_content-franqueado.astro';
+import ContentConsultor from './_content-consultor.astro';
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <Head />
+	</head>
+
+	<body class="body-popup">
+        <form method="" action="">
+            <ContentFranqueado />
+            <ContentConsultor />
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary btn-last-lg">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <script is:inline>
+            function compareDate(startDataAttribute, endDataAttribute) {
+                const dateStart = document.querySelector(`[data-date="${startDataAttribute}"]`)
+                const dateEnd = document.querySelector(`[data-date="${endDataAttribute}"]`)
+
+                const dateStartFormatted = new Date(dateStart.value + 'T00:00:00Z');
+                const dateEndFormatted = new Date(dateEnd.value + 'T00:00:00Z');
+
+                if (dateStartFormatted > dateEndFormatted) {
+                    const options = { timeZone: 'UTC', year: 'numeric', month: 'numeric', day: 'numeric' };
+                    const startDateFormatted = dateStartFormatted.toLocaleDateString('pt-BR', options);
+                    const endDateFormatted = dateEndFormatted.toLocaleDateString('pt-BR', options);
+
+                    alert(`A data final (${endDateFormatted}) é menor que a data inicial (${startDateFormatted}).`);
+                    dateEnd.value = '';
+                    dateEnd.classList.add('error-date')
+                } else{
+                    dateEnd.classList.remove('error-date')
+                }
+            }
+
+            function compareDate1() {
+                compareDate('start1', 'end1');
+            }
+            function compareDate2() {
+                compareDate('start2', 'end2');
+            }
+        </script>
+	</body>
+</html>
