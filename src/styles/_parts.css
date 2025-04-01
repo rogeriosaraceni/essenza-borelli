@@ -19,10 +19,6 @@ header-app
     padding-bottom: 0!important;
 }
 
-:root, [data-bs-theme=light] {
-    --bs-tertiary-color: #6c757d;
-}
-
 /* --------------------------------------------------------------------
 nav-app
 ---------------------------------------------------------------------- */
@@ -30,27 +26,35 @@ nav-app
     width: 100%;
     padding: 0.25rem 0;
     background: rgb(52,73,58);
-    background: linear-gradient(90deg, rgba(52,73,58,1) 0%, rgba(59,65,51,1) 50%, rgba(20,33,23,1) 100%);
 }
 
 @media (min-width: 992px){
-    .nav-app .navbar-nav .nav-item:first-child .nav-link  { padding-left: 0;}
-}
-
-
-.nav-app .nav-item  .nav-link.active,
-.nav-app .nav-item.active>a {
-    color: #ffffff;
+    .nav-app .navbar-nav .nav-item:first-child .nav-link{
+        padding-left: 0;
+    }
 }
 
 .nav-app .nav-item .nav-link,
-.nav-app .nav-item>a {
-    color: #8391a2;
+.nav-app .nav-item>a,
+.nav-app .btn {
+    color: #fff;
+    font-size: 0.8rem;
+}
+.nav-app .nav-item .nav-link:hover,
+.nav-app .nav-item>a:hover,
+.nav-app .btn:hover {
+    color: #bccee4;
+}
+.nav-app .nav-item  .nav-link.active,
+.nav-app .nav-item.active>a {
+    color: #fff;
 }
 
-.nav-app .nav-item .nav-link:hover,
-.nav-app .nav-item>a:hover {
-    color: #bccee4;
+.nav-app .nav.nav-auxiliar{
+    margin: 0;
+}
+.nav-app .nav.nav-auxiliar .nav-item{
+    --bs-nav-link-padding-x: 0.5rem;
 }
 
 /* --------------------------------------------------------------------
