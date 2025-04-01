@@ -1,6 +1,8 @@
 ---
 import Head from "@includes/head.astro";
 import ContentForm from "./_content-form.astro";
+import ContentScripts from "./_content-scripts.astro";
+import "./_assets/validPassword.css"
 ---
 
 <!doctype html>
@@ -10,8 +12,15 @@ import ContentForm from "./_content-form.astro";
     </head>
 
     <body class="body-popup">
-        <form method="POST" id="" action="">
+        <form method="POST" id="" action="" data-js="form">
             <ContentForm />
         </form>
+
+        <ContentScripts />
+
+        <!--
+        <script is:inline src="./_assets/btnShowPassword.js"></script>
+        <script is:inline src="./_assets/validPassword.js"></script>
+        -->
     </body>
 </html>

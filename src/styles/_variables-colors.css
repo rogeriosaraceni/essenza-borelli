@@ -22,13 +22,13 @@ variables
 class text color
 ---------------------------------------------------------------------- */
 .text-app-green-400   { color: var(--color-app-green-400);}
-
+.text-app-green-500   { color: var(--color-app-green-500);}
 
 /* --------------------------------------------------------------------
 class bg color
 ---------------------------------------------------------------------- */
 .bg-app-green-400   { background-color: var(--color-app-green-400);}
-
+.bg-app-green-500   { background-color: var(--color-app-green-500);}
 
 
 .bg-secondary-400 { background-color: var(--bs-gray-400)!important;}
