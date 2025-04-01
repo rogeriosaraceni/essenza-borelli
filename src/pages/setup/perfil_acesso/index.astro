@@ -2,6 +2,8 @@
 import Layout from '@layouts/Layout.astro';
 import Header from "@includes/header/header.astro";
 import BtnPrincipal from '@components/Btns/BtnPrincipal.astro';
+import ContentSelecao from './_content-selecao.astro';
+import ContentListagem from './_content-listagem.astro';
 ---
 
 <Layout>
@@ -31,7 +33,8 @@ import BtnPrincipal from '@components/Btns/BtnPrincipal.astro';
         </section>
 
         <section class="container-fluid">
-
+            <ContentSelecao />
+            <ContentListagem />
         </section>
     </main>
 </Layout>
